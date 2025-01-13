@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Add User</title>
+</head>
+<body>
+<h2>Add User</h2>
+<form th:method="POST" th:action="@{/adduser}" th:object="${user}">
+    <div>
+        <lable>Input name:</lable>
+        <input type="text" th:field="*{name}" id="name" required/>
+    </div>
+
+    <div>
+        <lable>Input lastname:</lable>
+        <input type="text" th:field="*{lastName}" id="lastname" required/>
+    </div>
+
+    <div>
+        <lable>Input age:</lable>
+        <input type="number" th:field="*{age}" id="age" required/>
+    </div>
+
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>

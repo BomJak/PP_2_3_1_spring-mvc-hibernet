@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modify</title>
+</head>
+<body>
+    <h1>Update</h1>
+
+    <form method="POST" th:action="@{/modifyuser}">
+        <input type="hidden" name="id" th:value="${user.id}"/>
+
+        <div>
+            <label>Name</label>
+            <input type="text" id="name" name="name" th:value="${user.name}" required/>
+        </div>
+
+        <div>
+            <label>Lastname</label>
+            <input type="text" id="lastname" name="lastname" th:value="${user.lastName}" required/>
+        </div>
+
+        <div>
+            <label>Lastname</label>
+            <input type="number" id="age" name="age" th:value="${user.age}" required/>
+        </div>
+
+        <input type="submit" value="Update"/>
+    </form>
+</body>
+</html>
